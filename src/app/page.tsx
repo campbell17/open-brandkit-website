@@ -113,15 +113,12 @@ export default function Home() {
                   playsInline
                   controls
                   preload="metadata"
-                  aria-label="Open BrandKit demo placeholder"
+                  aria-label="Open BrandKit demo"
                 >
-                  <source src="/demo/workload-toolbar.mp4" type="video/mp4" />
+                  <source src="/demo/open-brandkit.mp4" type="video/mp4" />
                 </video>
               </div>
             </div>
-            <p className="mt-3 text-xs text-zinc-600">
-              Placeholder footage — swap for a real /brandkit walkthrough later.
-            </p>
           </div>
         </section>
 
