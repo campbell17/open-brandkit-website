@@ -1,6 +1,8 @@
 import { type Metadata } from 'next'
 import { Inter, JetBrains_Mono } from 'next/font/google'
 
+import { ThemeProvider } from '@/components/theme-provider'
+import { ThemeToggle } from '@/components/theme-toggle'
 import '@/styles/tailwind.css'
 
 const inter = Inter({
@@ -30,9 +32,13 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${inter.variable} ${jetbrainsMono.variable} h-full scroll-smooth`}
+      suppressHydrationWarning
     >
-      <body className="min-h-full bg-zinc-950 font-sans text-zinc-100 antialiased">
-        {children}
+      <body className="min-h-full bg-white font-sans text-zinc-900 antialiased dark:bg-zinc-950 dark:text-zinc-100">
+        <ThemeProvider>
+          <ThemeToggle />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   )

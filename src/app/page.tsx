@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 const features = [
   {
     title: 'Logos & lockups',
@@ -31,6 +33,15 @@ const features = [
   },
 ]
 
+const lovedByLogos = [
+  { name: 'Forbes', src: '/logos/forbes.svg' },
+  { name: 'TechCrunch', src: '/logos/techcrunch.svg' },
+  { name: 'Wired', src: '/logos/wired.svg' },
+  { name: 'BBC', src: '/logos/bbc.svg' },
+  { name: 'Fast Company', src: '/logos/fast-company.svg' },
+  { name: 'CNN', src: '/logos/cnn.svg' },
+]
+
 export default function Home() {
   return (
     <div className="relative isolate overflow-hidden">
@@ -38,28 +49,34 @@ export default function Home() {
         aria-hidden
         className="pointer-events-none absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl"
       >
-        <div className="relative left-1/2 aspect-[1155/678] w-[72rem] -translate-x-1/2 bg-gradient-to-tr from-violet-600 to-cyan-400 opacity-20 sm:w-[90rem]" />
+        <div className="relative left-1/2 aspect-[1155/678] w-[72rem] -translate-x-1/2 bg-gradient-to-tr from-violet-600 to-cyan-400 opacity-15 dark:opacity-20 sm:w-[90rem]" />
       </div>
 
-      <header className="mx-auto flex max-w-6xl items-center justify-between px-6 py-8 lg:px-8">
+      <header className="mx-auto flex max-w-6xl items-center justify-between px-6 py-8 pr-16 lg:px-8 lg:pr-20">
         <div className="flex items-center gap-3">
           <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-violet-500 to-cyan-400 font-mono text-sm font-bold text-zinc-950">
             OB
           </div>
-          <span className="text-sm font-semibold tracking-tight">
+          <span className="text-sm font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">
             Open BrandKit
           </span>
         </div>
-        <nav className="hidden items-center gap-8 text-sm text-zinc-400 md:flex">
-          <a href="#features" className="hover:text-white">
+        <nav className="hidden items-center gap-8 text-sm text-zinc-600 dark:text-zinc-400 md:flex">
+          <a
+            href="#features"
+            className="transition hover:text-zinc-900 dark:hover:text-white"
+          >
             Features
           </a>
-          <a href="#install" className="hover:text-white">
+          <a
+            href="#install"
+            className="transition hover:text-zinc-900 dark:hover:text-white"
+          >
             Install
           </a>
           <a
             href="https://github.com/campbell17/open-brandkit"
-            className="hover:text-white"
+            className="transition hover:text-zinc-900 dark:hover:text-white"
           >
             GitHub
           </a>
@@ -68,43 +85,40 @@ export default function Home() {
 
       <main className="mx-auto max-w-6xl px-6 pb-24 lg:px-8">
         <section className="pb-16 pt-10 text-center md:pb-20 md:pt-16">
-          <p className="mx-auto mb-4 inline-flex items-center rounded-full border border-violet-500/30 bg-violet-500/10 px-3 py-1 text-xs font-medium text-violet-200">
-            Early alpha · npm installable
-          </p>
-          <h1 className="mx-auto max-w-4xl text-5xl font-semibold tracking-tight text-white sm:text-6xl lg:text-7xl">
+          <h1 className="mx-auto max-w-4xl text-5xl font-semibold tracking-tight text-zinc-900 sm:text-6xl lg:text-7xl dark:text-white">
             Brand assets deserve{' '}
-            <span className="bg-gradient-to-r from-violet-300 to-cyan-300 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-violet-600 to-cyan-500 bg-clip-text text-transparent dark:from-violet-300 dark:to-cyan-300">
               one honest page
             </span>
             .
           </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-zinc-400 sm:text-xl">
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-zinc-600 sm:text-xl dark:text-zinc-400">
             Open BrandKit turns the logos, colors, and icons in your repo into a
-            polished <code className="font-mono text-cyan-300">/brandkit</code>{' '}
+            polished{' '}
+            <code className="font-mono text-violet-600 dark:text-cyan-300">
+              /brandkit
+            </code>{' '}
             route — shareable, downloadable, and always in sync with what you
             ship.
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             <a
               href="#install"
-              className="rounded-lg bg-white px-5 py-3 text-sm font-semibold text-zinc-950 transition hover:bg-zinc-200"
+              className="rounded-lg bg-zinc-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-zinc-800 dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-200"
             >
               Get started
             </a>
             <a
               href="https://www.npmjs.com/package/open-brandkit"
-              className="rounded-lg border border-zinc-700 px-5 py-3 text-sm font-semibold text-zinc-200 transition hover:border-zinc-500 hover:text-white"
+              className="rounded-lg border border-zinc-300 px-5 py-3 text-sm font-semibold text-zinc-700 transition hover:border-zinc-400 hover:text-zinc-900 dark:border-zinc-700 dark:text-zinc-200 dark:hover:border-zinc-500 dark:hover:text-white"
             >
               View on npm
             </a>
           </div>
 
           <div className="mx-auto mt-14 max-w-5xl md:mt-16">
-            <p className="mb-4 text-sm font-medium text-zinc-500">
-              Quick demo
-            </p>
-            <div className="overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900/80 p-2 shadow-2xl shadow-violet-950/40 ring-1 ring-white/5">
-              <div className="overflow-hidden rounded-xl bg-zinc-950">
+            <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-50/80 p-2 shadow-xl shadow-zinc-900/5 ring-1 ring-zinc-900/5 dark:border-zinc-800 dark:bg-zinc-900/80 dark:shadow-violet-950/40 dark:ring-white/5">
+              <div className="overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-950">
                 <video
                   className="aspect-video w-full object-cover"
                   autoPlay
@@ -119,28 +133,50 @@ export default function Home() {
                 </video>
               </div>
             </div>
+
+            <div className="mt-10">
+              <p className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+                Loved by:
+              </p>
+              <ul className="mx-auto mt-6 flex max-w-3xl flex-wrap items-center justify-center gap-x-10 gap-y-8">
+                {lovedByLogos.map((logo) => (
+                  <li key={logo.name}>
+                    <Image
+                      src={logo.src}
+                      alt={logo.name}
+                      width={120}
+                      height={32}
+                      className="h-7 w-auto opacity-70 dark:opacity-50 dark:invert"
+                      unoptimized
+                    />
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </section>
 
         <section
           id="install"
-          className="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-6 shadow-2xl shadow-violet-950/30 backdrop-blur sm:p-8"
+          className="rounded-2xl border border-zinc-200 bg-zinc-50/80 p-6 shadow-lg shadow-zinc-900/5 backdrop-blur sm:p-8 dark:border-zinc-800 dark:bg-zinc-900/60 dark:shadow-violet-950/30"
         >
-          <p className="text-sm font-medium text-zinc-400">Install</p>
-          <pre className="mt-3 overflow-x-auto font-mono text-sm leading-7 text-zinc-100">
+          <p className="text-sm font-medium text-zinc-600 dark:text-zinc-400">
+            Install
+          </p>
+          <pre className="mt-3 overflow-x-auto font-mono text-sm leading-7 text-zinc-800 dark:text-zinc-100">
             <code>{`npx open-brandkit init --install --build`}</code>
           </pre>
           <p className="mt-4 text-sm text-zinc-500">
             From the root of an existing Next.js App Router project. Then open{' '}
-            <code className="text-zinc-300">/brandkit</code>.
+            <code className="text-zinc-700 dark:text-zinc-300">/brandkit</code>.
           </p>
         </section>
 
         <section id="features" className="mt-20 md:mt-28">
-          <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+          <h2 className="text-3xl font-semibold tracking-tight text-zinc-900 sm:text-4xl dark:text-white">
             Everything a brand kit page should do
           </h2>
-          <p className="mt-4 max-w-2xl text-zinc-400">
+          <p className="mt-4 max-w-2xl text-zinc-600 dark:text-zinc-400">
             No more stale PDFs or scattered Drive folders. One generated page,
             tied to the files you actually deploy.
           </p>
@@ -148,16 +184,16 @@ export default function Home() {
             {features.map((feature) => (
               <article
                 key={feature.title}
-                className={`group relative overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6 ${feature.span}`}
+                className={`group relative overflow-hidden rounded-2xl border border-zinc-200 bg-white/60 p-6 dark:border-zinc-800 dark:bg-zinc-900/40 ${feature.span}`}
               >
                 <div
                   className={`absolute inset-0 bg-gradient-to-br opacity-0 transition group-hover:opacity-100 ${feature.accent}`}
                 />
                 <div className="relative">
-                  <h3 className="text-lg font-semibold text-white">
+                  <h3 className="text-lg font-semibold text-zinc-900 dark:text-white">
                     {feature.title}
                   </h3>
-                  <p className="mt-2 text-sm leading-6 text-zinc-400">
+                  <p className="mt-2 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
                     {feature.body}
                   </p>
                 </div>
@@ -166,11 +202,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="mt-20 rounded-3xl border border-zinc-800 bg-gradient-to-br from-violet-950/50 via-zinc-900 to-zinc-950 px-8 py-14 text-center md:mt-28">
-          <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+        <section className="mt-20 rounded-3xl border border-zinc-200 bg-gradient-to-br from-violet-100/80 via-white to-zinc-50 px-8 py-14 text-center dark:border-zinc-800 dark:from-violet-950/50 dark:via-zinc-900 dark:to-zinc-950 md:mt-28">
+          <h2 className="text-3xl font-semibold tracking-tight text-zinc-900 sm:text-4xl dark:text-white">
             Stop emailing zip files.
           </h2>
-          <p className="mx-auto mt-4 max-w-xl text-zinc-400">
+          <p className="mx-auto mt-4 max-w-xl text-zinc-600 dark:text-zinc-400">
             Put approved brand files in your repo, run the installer, and give
             partners a URL that stays current.
           </p>
@@ -183,7 +219,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="border-t border-zinc-800/80 py-8 text-center text-sm text-zinc-500">
+      <footer className="border-t border-zinc-200 py-8 text-center text-sm text-zinc-500 dark:border-zinc-800/80">
         Open BrandKit
       </footer>
     </div>
