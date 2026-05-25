@@ -72,6 +72,14 @@ const lovedByLogos = [
   },
 ]
 
+function GitHubIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" {...props}>
+      <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+    </svg>
+  )
+}
+
 function LovedByLogo({
   name,
   src,
@@ -114,13 +122,7 @@ export default function Home() {
             className="h-8 w-auto"
           />
         </a>
-        <nav className="hidden items-center gap-8 text-sm text-zinc-600 dark:text-zinc-400 md:flex">
-          <a
-            href="#features"
-            className="transition hover:text-[#4d8293] dark:hover:text-[#bde6ff]"
-          >
-            Features
-          </a>
+        <nav className="hidden items-center gap-6 text-sm text-zinc-600 dark:text-zinc-400 md:flex">
           <a
             href="#install"
             className="transition hover:text-[#4d8293] dark:hover:text-[#bde6ff]"
@@ -129,18 +131,36 @@ export default function Home() {
           </a>
           <a
             href="https://github.com/campbell17/open-brandkit"
-            className="transition hover:text-[#4d8293] dark:hover:text-[#bde6ff]"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            className="text-zinc-600 transition hover:text-[#4d8293] dark:text-zinc-400 dark:hover:text-[#bde6ff]"
           >
-            GitHub
+            <GitHubIcon className="h-5 w-5" />
+          </a>
+          <a
+            href="https://www.npmjs.com/package/open-brandkit"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="npm"
+            className="transition hover:opacity-80"
+          >
+            <img
+              src="/images/npm-icon.svg"
+              alt=""
+              width={20}
+              height={20}
+              className="h-5 w-5"
+            />
           </a>
         </nav>
       </header>
 
       <main className="mx-auto max-w-6xl px-6 pb-24 lg:px-8">
         <section className="pb-16 pt-10 text-center md:pb-20 md:pt-16">
-          <h1 className="mx-auto max-w-4xl text-5xl font-semibold tracking-tight text-zinc-900 sm:text-6xl lg:text-7xl dark:text-white">
+          <h1 className="mx-auto max-w-5xl text-5xl font-semibold tracking-tighter text-zinc-900 sm:text-6xl lg:text-7xl dark:text-white">
             Got a logo? Get{' '}
-            <span className="text-brand-gradient">BrandKit</span>.
+            <span className="text-brand-gradient">Open BrandKit</span>.
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-zinc-600 sm:text-xl dark:text-zinc-400">
             Open BrandKit gives you one clean page on your site where the team
@@ -148,16 +168,16 @@ export default function Home() {
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             <a
-              href="#install"
+              href="/brandkit"
               className="rounded-lg bg-[#4d8293] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#3f6d7b]"
             >
-              Get started
+              See it in action
             </a>
             <a
-              href="https://www.npmjs.com/package/open-brandkit"
+              href="#install"
               className="rounded-lg border border-[#4d8293]/30 px-5 py-3 text-sm font-semibold text-[#4d8293] transition hover:border-[#4d8293]/60 hover:bg-[#4d8293]/5 dark:border-[#bde6ff]/30 dark:text-[#bde6ff] dark:hover:border-[#bde6ff]/60 dark:hover:bg-[#bde6ff]/5"
             >
-              View on npm
+              Installation
             </a>
           </div>
 
@@ -193,7 +213,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="install" className="flex flex-col gap-4">
+        <section id="install" className="mt-20 md:mt-28">
+          <h2 className="text-3xl font-semibold tracking-tight text-zinc-900 sm:text-4xl dark:text-white">
+            Installation
+          </h2>
+          <div className="mt-8 flex flex-col gap-4">
           <div className="rounded-2xl border border-zinc-200 bg-zinc-50/80 p-6 shadow-lg shadow-zinc-900/5 backdrop-blur sm:p-8 dark:border-zinc-800 dark:bg-zinc-900/60 dark:shadow-[#4d8293]/15">
             <p className="text-sm font-medium text-zinc-600 dark:text-zinc-400">
               Install
@@ -237,6 +261,7 @@ export default function Home() {
               </code>{' '}
               if you want the alpha dist-tag.
             </p>
+          </div>
           </div>
         </section>
 
