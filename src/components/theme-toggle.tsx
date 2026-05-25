@@ -77,7 +77,7 @@ export function ThemeToggle() {
     <button
       type="button"
       onClick={() => setTheme(next)}
-      className="fixed top-4 right-4 z-50 flex h-9 w-9 items-center justify-center rounded-full border border-zinc-200/80 bg-white/80 text-zinc-500 backdrop-blur transition hover:text-zinc-900 dark:border-zinc-800/80 dark:bg-zinc-950/80 dark:text-zinc-400 dark:hover:text-zinc-100"
+      className="fixed top-4 right-4 z-50 flex h-9 w-9 items-center justify-center rounded-full border border-zinc-200/80 bg-white/80 text-zinc-500 backdrop-blur transition hover:border-[#4d8293]/30 hover:text-[#4d8293] dark:border-zinc-800/80 dark:bg-zinc-950/80 dark:text-zinc-400 dark:hover:border-[#bde6ff]/30 dark:hover:text-[#bde6ff]"
       aria-label={`${labels[current]}. Switch to ${labels[next]}.`}
       title={labels[current]}
     >

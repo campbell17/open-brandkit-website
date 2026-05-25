@@ -1,0 +1,270 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-05-25T17:20:17.523Z",
+  "route": "/brandkit",
+  "assetBasePath": "/brandkit",
+  "brand": {
+    "name": "Open BrandKit",
+    "shortName": "OBK",
+    "description": "Approved assets, colors, avatars, and social banners for Open BrandKit."
+  },
+  "assetGroups": [
+    {
+      "key": "logo-lockups",
+      "label": "Logo Lockups",
+      "description": "Primary logo lockups in approved colorways.",
+      "items": [
+        {
+          "id": "logo-lockups:open-brandkit-logo",
+          "title": "Logo",
+          "previewTone": "light",
+          "previewUrl": "/brandkit/logos/open-brandkit-logo.svg",
+          "downloads": [
+            {
+              "fileName": "open-brandkit-logo.svg",
+              "format": "SVG",
+              "url": "/brandkit/logos/open-brandkit-logo.svg"
+            },
+            {
+              "fileName": "open-brandkit-logo.png",
+              "format": "PNG",
+              "url": "/brandkit/logos/open-brandkit-logo.png"
+            }
+          ]
+        },
+        {
+          "id": "logo-lockups:open-brandkit-logo-black",
+          "title": "Logo Black",
+          "previewTone": "light",
+          "previewUrl": "/brandkit/logos/open-brandkit-logo-black.svg",
+          "downloads": [
+            {
+              "fileName": "open-brandkit-logo-black.svg",
+              "format": "SVG",
+              "url": "/brandkit/logos/open-brandkit-logo-black.svg"
+            },
+            {
+              "fileName": "open-brandkit-logo-black.png",
+              "format": "PNG",
+              "url": "/brandkit/logos/open-brandkit-logo-black.png"
+            }
+          ]
+        },
+        {
+          "id": "logo-lockups:open-brandkit-logo-white",
+          "title": "Logo White",
+          "previewTone": "dark",
+          "previewUrl": "/brandkit/logos/open-brandkit-logo-white.svg",
+          "downloads": [
+            {
+              "fileName": "open-brandkit-logo-white.svg",
+              "format": "SVG",
+              "url": "/brandkit/logos/open-brandkit-logo-white.svg"
+            },
+            {
+              "fileName": "open-brandkit-logo-white.png",
+              "format": "PNG",
+              "url": "/brandkit/logos/open-brandkit-logo-white.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "icons",
+      "label": "Icons",
+      "description": "Symbol-only marks for compact surfaces.",
+      "items": [
+        {
+          "id": "icons:open-brandkit-icon",
+          "title": "Icon",
+          "previewTone": "light",
+          "previewUrl": "/brandkit/logos/open-brandkit-icon.svg",
+          "downloads": [
+            {
+              "fileName": "open-brandkit-icon.svg",
+              "format": "SVG",
+              "url": "/brandkit/logos/open-brandkit-icon.svg"
+            },
+            {
+              "fileName": "open-brandkit-icon.png",
+              "format": "PNG",
+              "url": "/brandkit/logos/open-brandkit-icon.png"
+            }
+          ]
+        },
+        {
+          "id": "icons:open-brandkit-icon-black",
+          "title": "Icon Black",
+          "previewTone": "light",
+          "previewUrl": "/brandkit/logos/open-brandkit-icon-black.svg",
+          "downloads": [
+            {
+              "fileName": "open-brandkit-icon-black.svg",
+              "format": "SVG",
+              "url": "/brandkit/logos/open-brandkit-icon-black.svg"
+            },
+            {
+              "fileName": "open-brandkit-icon-black.png",
+              "format": "PNG",
+              "url": "/brandkit/logos/open-brandkit-icon-black.png"
+            }
+          ]
+        },
+        {
+          "id": "icons:open-brandkit-icon-white",
+          "title": "Icon White",
+          "previewTone": "dark",
+          "previewUrl": "/brandkit/logos/open-brandkit-icon-white.svg",
+          "downloads": [
+            {
+              "fileName": "open-brandkit-icon-white.svg",
+              "format": "SVG",
+              "url": "/brandkit/logos/open-brandkit-icon-white.svg"
+            },
+            {
+              "fileName": "open-brandkit-icon-white.png",
+              "format": "PNG",
+              "url": "/brandkit/logos/open-brandkit-icon-white.png"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "brandColors": [
+    {
+      "name": "OBK Teal",
+      "hex": "#4d8293"
+    },
+    {
+      "name": "OBK Open",
+      "hex": "#e85454"
+    },
+    {
+      "name": "OBK Plum",
+      "hex": "#914d84"
+    },
+    {
+      "name": "OBK Skye",
+      "hex": "#bde6ff"
+    }
+  ],
+  "colorSections": [
+    {
+      "label": "Primary",
+      "columns": 2,
+      "rows": [
+        [
+          "OBK Teal",
+          "OBK Open"
+        ]
+      ]
+    },
+    {
+      "label": "Secondary",
+      "columns": 3,
+      "rows": [
+        [
+          "OBK Plum",
+          "OBK Skye"
+        ]
+      ]
+    }
+  ],
+  "printColorGroups": [],
+  "bannerGroups": [
+    {
+      "key": "x-profile-header",
+      "label": "X / Twitter profile header",
+      "items": [
+        {
+          "id": "x-profile-header",
+          "title": "X / Twitter profile header",
+          "description": "1500 x 500 px",
+          "width": 1500,
+          "height": 500,
+          "previewUrl": "/brandkit/banners/obk-x-profile-header.png",
+          "downloads": [
+            {
+              "fileName": "obk-x-profile-header.png",
+              "format": "PNG",
+              "url": "/brandkit/banners/obk-x-profile-header.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "linkedin-personal-background",
+      "label": "LinkedIn personal background",
+      "items": [
+        {
+          "id": "linkedin-personal-background",
+          "title": "LinkedIn personal background",
+          "description": "1584 x 396 px",
+          "width": 1584,
+          "height": 396,
+          "previewUrl": "/brandkit/banners/obk-linkedin-personal-background.png",
+          "downloads": [
+            {
+              "fileName": "obk-linkedin-personal-background.png",
+              "format": "PNG",
+              "url": "/brandkit/banners/obk-linkedin-personal-background.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "linkedin-organization-cover",
+      "label": "LinkedIn organization cover",
+      "items": [
+        {
+          "id": "linkedin-organization-cover",
+          "title": "LinkedIn organization cover",
+          "description": "4200 x 700 px",
+          "width": 4200,
+          "height": 700,
+          "previewUrl": "/brandkit/banners/obk-linkedin-organization-cover.png",
+          "downloads": [
+            {
+              "fileName": "obk-linkedin-organization-cover.png",
+              "format": "PNG",
+              "url": "/brandkit/banners/obk-linkedin-organization-cover.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "facebook-page-cover",
+      "label": "Facebook page cover",
+      "items": [
+        {
+          "id": "facebook-page-cover",
+          "title": "Facebook page cover",
+          "description": "851 x 315 px",
+          "width": 851,
+          "height": 315,
+          "previewUrl": "/brandkit/banners/obk-facebook-page-cover.png",
+          "downloads": [
+            {
+              "fileName": "obk-facebook-page-cover.png",
+              "format": "PNG",
+              "url": "/brandkit/banners/obk-facebook-page-cover.png"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "downloads": {
+    "allAssets": "/brandkit/downloads/obk-all-assets.zip",
+    "assetGroups": {
+      "logo-lockups": "/brandkit/downloads/obk-logo-lockups.zip",
+      "icons": "/brandkit/downloads/obk-icons.zip"
+    },
+    "bannerAssets": "/brandkit/downloads/obk-banners.zip"
+  }
+}

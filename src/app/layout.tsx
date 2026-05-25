@@ -20,7 +20,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: 'Open BrandKit — brand assets, one page',
   description:
-    'Turn the brand files you already have into a polished /brandkit page for your Next.js site.',
+    'Turn the brand files you already have into a simple, shareable brand page on your website.',
 }
 
 export default function RootLayout({

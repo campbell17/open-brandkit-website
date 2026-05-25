@@ -6,13 +6,15 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "brandkit:build": "open-brandkit build"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.2.4",
     "clsx": "^2.1.1",
     "next": "16.2.6",
     "next-themes": "^0.4.6",
+    "open-brandkit": "^0.5.9",
     "react": "19.2.6",
     "react-dom": "19.2.6",
     "tailwindcss": "^4.2.4",
